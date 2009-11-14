@@ -1,3 +1,7 @@
+== Changes in this Firk
+
+* Converted to Gem.
+
 This plugin for ActiveRecord makes the "ID" field into a URL-safe GUID
 It is a mashup by Andy Singleton <andy@assembla.com> that includes 
 * the UUID class from Bob Aman.
