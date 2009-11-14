@@ -14,13 +14,12 @@ Gem::Specification.new do |s|
   s.email = %q{jason@lookforwardenterprises.com}
   s.extra_rdoc_files = [
     "LICENSE",
-     "README"
+     "README.rdoc"
   ]
   s.files = [
-    ".document",
-     ".gitignore",
+    "History.txt",
      "LICENSE",
-     "README",
+     "README.rdoc",
      "Rakefile",
      "VERSION",
      "lib/usesguid.rb",

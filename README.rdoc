@@ -2,6 +2,7 @@
 
 * Converted to Gem ported by C. Jason Harrelson (midas)
 
+
 == DETAILS
 
 This plugin for ActiveRecord makes the "ID" field into a URL-safe GUID
@@ -20,6 +21,7 @@ It has been extended by Brian Morearty with:
 
 This library is free software; you can redistribute it and/or modify it
 under the terms of the MIT license.
+
 
 == TO USE
 
@@ -42,3 +44,7 @@ If you use MySQL as your database, you can make guid generation much faster
 by putting this in config/environment.rb:
 
   ActiveRecord::Base.guid_generator = :mysql
+
+== TODO
+
+* Add tests
