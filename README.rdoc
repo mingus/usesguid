@@ -16,7 +16,13 @@ This library is free software; you can redistribute it and/or modify it
 under the terms of the MIT license.
 
 TO USE
-Install as a plugin in the rails directory vendor/plugin/guid
+
+  sudo gem install usesguid
+
+In Rails environment file:
+
+  config.gem "usesguid"
+
 define ID as char(22)
 call "usesguid" in ActiveRecord class declaration, like
 class Mymodel < ActiveRecord::Base
