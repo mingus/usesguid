@@ -1,6 +1,8 @@
-== Changes in this Firk
+== Changes in this Fork
 
 * Converted to Gem.
+
+== DETAILS
 
 This plugin for ActiveRecord makes the "ID" field into a URL-safe GUID
 It is a mashup by Andy Singleton <andy@assembla.com> that includes 
@@ -19,7 +21,7 @@ It has been extended by Brian Morearty with:
 This library is free software; you can redistribute it and/or modify it
 under the terms of the MIT license.
 
-TO USE
+== TO USE
 
   sudo gem install usesguid
 
@@ -28,13 +30,15 @@ In Rails environment file:
   config.gem "usesguid"
 
 define ID as char(22)
-call "usesguid" in ActiveRecord class declaration, like
-class Mymodel < ActiveRecord::Base
-  usesguid			
-end
+call "usesguid" in ActiveRecord class declaration, like:
+
+  class Mymodel < ActiveRecord::Base
+    usesguid			
+  end
 
 if your ID field is not called "ID", call "usesguid :column =>'IdColumnName' "
 
 If you use MySQL as your database, you can make guid generation much faster
 by putting this in config/environment.rb:
+
   ActiveRecord::Base.guid_generator = :mysql
