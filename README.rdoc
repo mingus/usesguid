@@ -1,6 +1,6 @@
 == Changes in this Fork
 
-* Converted to Gem.
+* Converted to Gem ported by C. Jason Harrelson (midas)
 
 == DETAILS
 
