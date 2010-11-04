@@ -1,7 +1,8 @@
-== Changes in this Fork
+== Changes in ZangZing's Fork
 
-* Converted to Gem ported by C. Jason Harrelson (midas)
+* Updated uuidtools library to https://github.com/sporkmonger/uuidtools/commit/45b0970a8cdaefb923e5d261307b995a9ee46396
 
+* Added option to use ActiveRecord::Base.guid_generator = :random to generate SecureRandom seeded UUIDs
 
 == DETAILS
 
