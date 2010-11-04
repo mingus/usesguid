@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brian Morearty", "Demetrio Nunes", "Robert Aman", "C. Jason Harrelson(midas)"]
-  s.date = %q{2009-11-13}
+  s.date = %q{2010-11-04}
   s.description = %q{A much faster version of the usesguid plugin for Rails (uses MySQL to generate GUIDs)}
   s.email = %q{jason@lookforwardenterprises.com}
   s.extra_rdoc_files = [
@@ -24,9 +24,11 @@ Gem::Specification.new do |s|
      "VERSION",
      "lib/usesguid.rb",
      "lib/usesguid/active_record_extensions.rb",
+     "lib/usesguid/compat/securerandom.rb",
      "lib/usesguid/uuid22.rb",
      "lib/usesguid/uuid_mysql.rb",
      "lib/usesguid/uuidtools.rb",
+     "lib/usesguid/uuidtools/version.rb",
      "script/console",
      "spec/spec_helper.rb",
      "spec/usesguid_spec.rb",
@@ -35,7 +37,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/midas/usesguid}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.7}
   s.summary = %q{A much faster version of the usesguid plugin for Rails}
   s.test_files = [
     "spec/spec_helper.rb",
@@ -46,7 +48,7 @@ Gem::Specification.new do |s|
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<rspec>, [">= 0"])
     else
       s.add_dependency(%q<rspec>, [">= 0"])
