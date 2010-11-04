@@ -36,7 +36,7 @@ module Usesguid
           # Give this record a guid id.  Public method so people can call it before save if necessary.
           def assign_guid
             self[self.class.primary_key] ||= case ActiveRecord::Base.guid_generator
-              when :mysql then UUID.mysql_create(self.connection)
+              when :mysql then UUIDTools::UUID.mysql_create(self.connection)
               when :timestamp then UUIDTools::UUID.timestamp_create()
               when :random then UUIDTools::UUID.random_create()  
               else raise "Unrecognized guid generator '#{ActiveRecord::Base.guid_generator.to_s}'"
