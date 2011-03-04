@@ -35,6 +35,12 @@ module Usesguid
 
           # Give this record a guid id.  Public method so people can call it before save if necessary.
           def assign_guid
+            # This could probably be prettied up a little:
+            if ActiveRecord::Base.guid_generator == :random36
+              # generate full 36-character RFC 4122 string (e.g., "f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
+              self[self.class.primary_key] ||= UUID.random_create().to_s
+              return
+            end
             self[self.class.primary_key] ||= case ActiveRecord::Base.guid_generator
               when :mysql then UUIDTools::UUID.mysql_create(self.connection)
               when :timestamp then UUIDTools::UUID.timestamp_create()
